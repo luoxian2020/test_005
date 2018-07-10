@@ -63,10 +63,10 @@ class Login_Page(Base1):
             allure.attach('状态','关闭失败')
             allure.attach('状态失败原因:','%s' % e)
 
-    @allure.step('截图')
-    def get_screen_01(self):
-        image_file = './screen/%d.png' % int(time.time())
-        self.driver.get_screenshot_as_file(image_file)
-        with open(image_file,'rb') as f:
-            allure.attach('截图名字',f.read(),allure.attach_type.PNG)
+    # @allure.step('截图')
+    # def get_screen_01(self):
+    #     image_file = './screen/%d.png' % int(time.time())
+    #     self.driver.get_screenshot_as_file(image_file)
+    #     with open(image_file,'rb') as f:
+    #         allure.attach('截图名字',f.read(),allure.attach_type.PNG)
 
