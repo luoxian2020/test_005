@@ -1,3 +1,5 @@
+import sys,os
+sys.path.append(os.getcwd())
 from Base.Base import Base1
 import Page,time
 import allure
