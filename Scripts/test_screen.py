@@ -1,7 +1,9 @@
+
 import allure
 class Test_Screen:
 
     def get_screen_01(self):
+
         with open('./screen/test.png','rb') as f:
             allure.attach('截图名字',f.read(),allure.attach_type.PNG)
 
