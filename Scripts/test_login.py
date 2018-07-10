@@ -59,6 +59,7 @@ class Test_login:
                 assert login_toast==expect_message and login_status
 
             except Exception as e:
+                self.page_obj.get_login_page().get_screen_01()
                 assert False
             finally:
                 # 点击 登录页面的关闭按钮
@@ -70,6 +71,7 @@ class Test_login:
                     assert mess == expect_message
 
                 else:
+                    self.page_obj.get_login_page().get_screen_01()
                     assert False
             finally:
                 self.page_obj.get_login_page().quit_login_page()

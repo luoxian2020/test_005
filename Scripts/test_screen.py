@@ -7,6 +7,10 @@ import time
 class Test_Screen:
     def setup_class(self):
         self.driver = get_driver()
+        time.sleep(3)
+
+    def teardown_class(self):
+        self.driver.quit()
 
     def get_screen_01(self):
         image_file = './screen/%d.png' % int(time.time())
